@@ -68,7 +68,6 @@ export default function CheckoutPage() {
 
                 <div className="checkout-layout">
                     <form onSubmit={handleSubmit} className="checkout-main animate-fadeInLeft">
-                        {/* Shipping Section */}
                         <div className="checkout-section">
                             <div className="section-header-compact">
                                 <MapPin size={24} className="text-primary" />
@@ -107,7 +106,6 @@ export default function CheckoutPage() {
                             </div>
                         </div>
 
-                        {/* Payment Section */}
                         <div className="checkout-section mt-8">
                             <div className="section-header-compact">
                                 <CreditCard size={24} className="text-primary" />
@@ -149,7 +147,6 @@ export default function CheckoutPage() {
                         </button>
                     </form>
 
-                    {/* Sidebar Summary */}
                     <aside className="checkout-sidebar animate-fadeInRight">
                         <div className="summary-card">
                             <h3 className="heading-md mb-6">Order Items</h3>

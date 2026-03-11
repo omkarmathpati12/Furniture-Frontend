@@ -10,7 +10,6 @@ export default function ProductListPage() {
     const [viewMode, setViewMode] = useState('grid')
     const location = useLocation()
 
-    // Get query params
     const query = new URLSearchParams(location.search)
     const categoryParam = query.get('category') || ''
     const keywordParam = query.get('keyword') || ''
@@ -58,7 +57,6 @@ export default function ProductListPage() {
 
             <div className="container py-12">
                 <div className="products-layout">
-                    {/* Sidebar Filters */}
                     <aside className="products-sidebar">
                         <div className="filter-section">
                             <h3 className="heading-md mb-4">Categories</h3>
@@ -86,7 +84,6 @@ export default function ProductListPage() {
                         </div>
                     </aside>
 
-                    {/* Main Content */}
                     <div className="products-main">
                         <div className="products-toolbar flex-between mb-8">
                             <div className="text-muted">

@@ -6,7 +6,6 @@ export default function Footer() {
         <footer className="footer">
             <div className="container">
                 <div className="footer__grid">
-                    {/* Brand */}
                     <div className="footer__brand">
                         <div className="footer__logo">
                             <span>🪑</span>
@@ -24,7 +23,6 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Shop */}
                     <div>
                         <h4 className="footer__heading">Shop</h4>
                         <ul className="footer__list">
@@ -37,7 +35,6 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Help */}
                     <div>
                         <h4 className="footer__heading">Help</h4>
                         <ul className="footer__list">
@@ -49,7 +46,6 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Contact */}
                     <div>
                         <h4 className="footer__heading">Contact Us</h4>
                         <ul className="footer__contact-list">

@@ -182,7 +182,6 @@ export default function AdminProducts() {
                 </div>
             </div>
 
-            {/* Modal */}
             {modalOpen && (
                 <div className="modal-overlay">
                     <div className="modal-content animate-scaleIn">

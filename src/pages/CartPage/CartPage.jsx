@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useCart } from '../../context/CartContext'
-import { Trash2, Minus, Plus, ShoppingBag, ArrowRight, Heart } from 'lucide-react'
+import { Trash2, Minus, Plus, ShoppingBag, ArrowRight, Heart, ShieldCheck } from 'lucide-react'
 import toast from 'react-hot-toast'
 import './CartPage.css'
 
@@ -69,7 +69,6 @@ export default function CartPage() {
 
             <div className="container py-12">
                 <div className="cart-layout">
-                    {/* Cart Items */}
                     <div className="cart-main">
                         <div className="cart-header-row">
                             <span>Product Details</span>
@@ -122,14 +121,13 @@ export default function CartPage() {
                         </div>
                     </div>
 
-                    {/* Cart Summary */}
                     <aside className="cart-summary animate-fadeInRight">
                         <div className="summary-card">
                             <h3 className="heading-md mb-6 pb-4 border-bottom">Order Summary</h3>
 
                             <div className="summary-row">
                                 <span>Subtotal</span>
-                                <span>₹{cart.totalAmount.toLocaleString()}</span>
+                               <span>₹{cart.totalAmount.toLocaleString()}</span>
                             </div>
                             <div className="summary-row">
                                 <span>Shipping</span>

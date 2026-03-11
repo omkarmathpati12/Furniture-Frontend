@@ -50,7 +50,6 @@ export default function Navbar() {
     return (
         <header className={navClass}>
             <div className="container navbar__inner">
-                {/* Logo */}
                 <Link to="/" className="navbar__logo">
                     <span className="navbar__logo-icon">🪑</span>
                     <div>
@@ -59,7 +58,6 @@ export default function Navbar() {
                     </div>
                 </Link>
 
-                {/* Desktop Nav Links */}
                 <nav className="navbar__links">
                     <Link to="/" className={`navbar__link ${location.pathname === '/' ? 'active' : ''}`}>Home</Link>
                     <Link to="/products" className={`navbar__link ${location.pathname.startsWith('/products') ? 'active' : ''}`}>Shop</Link>
@@ -68,9 +66,7 @@ export default function Navbar() {
                     <Link to="/products?category=TABLE" className="navbar__link">Tables</Link>
                 </nav>
 
-                {/* Right Actions */}
                 <div className="navbar__actions">
-                    {/* Search */}
                     <button
                         className="navbar__icon-btn"
                         onClick={() => setSearchOpen(!searchOpen)}
@@ -79,7 +75,6 @@ export default function Navbar() {
                         <Search size={20} />
                     </button>
 
-                    {/* Cart */}
                     {user && (
                         <Link to="/cart" className="navbar__icon-btn navbar__cart-btn" title="Cart">
                             <ShoppingCart size={20} />
@@ -89,7 +84,6 @@ export default function Navbar() {
                         </Link>
                     )}
 
-                    {/* User Menu */}
                     {user ? (
                         <div className="navbar__user-menu">
                             <button
@@ -134,7 +128,6 @@ export default function Navbar() {
                         </div>
                     )}
 
-                    {/* Mobile menu toggle */}
                     <button
                         className="navbar__mobile-toggle"
                         onClick={() => setMobileOpen(!mobileOpen)}
@@ -144,7 +137,6 @@ export default function Navbar() {
                 </div>
             </div>
 
-            {/* Search Bar */}
             {searchOpen && (
                 <div className="navbar__search-bar">
                     <form onSubmit={handleSearch} className="navbar__search-form">
@@ -165,7 +157,6 @@ export default function Navbar() {
                 </div>
             )}
 
-            {/* Mobile Menu */}
             {mobileOpen && (
                 <div className="navbar__mobile-menu">
                     <nav className="navbar__mobile-links">

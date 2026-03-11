@@ -47,7 +47,6 @@ export default function AdminDashboard() {
                     </div>
                 </div>
 
-                {/* Stats Grid */}
                 <div className="stats-grid">
                     {statCards.map((stat, idx) => (
                         <div key={idx} className={`stat-card stat-card--${stat.color} animate-fadeInUp`} style={{ animationDelay: `${idx * 0.1}s` }}>
@@ -60,7 +59,6 @@ export default function AdminDashboard() {
                     ))}
                 </div>
 
-                {/* Quick Links */}
                 <div className="grid-2 mt-10">
                     <div className="admin-card animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
                         <div className="admin-card__header flex-between">

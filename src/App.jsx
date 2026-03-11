@@ -3,11 +3,9 @@ import { Toaster } from 'react-hot-toast'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import { CartProvider } from './context/CartContext'
 
-// Components
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 
-// User Pages
 import HomePage from './pages/HomePage/HomePage'
 import ProductListPage from './pages/ProductListPage/ProductListPage'
 import ProductDetailsPage from './pages/ProductDetailsPage/ProductDetailsPage'
@@ -17,12 +15,10 @@ import CartPage from './pages/CartPage/CartPage'
 import CheckoutPage from './pages/CheckoutPage/CheckoutPage'
 import OrderHistoryPage from './pages/OrderHistoryPage/OrderHistoryPage'
 
-// Admin Pages
 import AdminDashboard from './pages/AdminPages/AdminDashboard'
 import AdminProducts from './pages/AdminPages/AdminProducts'
 import AdminOrders from './pages/AdminPages/AdminOrders'
 
-// Protected Route Component
 const ProtectedRoute = ({ children, adminOnly = false }) => {
     const { user, loading } = useAuth()
 
@@ -44,14 +40,12 @@ function App() {
                         <Navbar />
                         <main className="main-content">
                             <Routes>
-                                {/* Public Routes */}
                                 <Route path="/" element={<HomePage />} />
                                 <Route path="/products" element={<ProductListPage />} />
                                 <Route path="/products/:id" element={<ProductDetailsPage />} />
                                 <Route path="/login" element={<LoginPage />} />
                                 <Route path="/register" element={<RegisterPage />} />
 
-                                {/* User Protected Routes */}
                                 <Route path="/cart" element={
                                     <ProtectedRoute>
                                         <CartPage />
@@ -68,7 +62,6 @@ function App() {
                                     </ProtectedRoute>
                                 } />
 
-                                {/* Admin Routes */}
                                 <Route path="/admin" element={
                                     <ProtectedRoute adminOnly>
                                         <AdminDashboard />

@@ -32,7 +32,6 @@ export default function HomePage() {
 
     return (
         <div className="home-page">
-            {/* Hero Section */}
             <section className="hero">
                 <div className="hero__overlay"></div>
                 <div className="container hero__content animate-fadeInUp">
@@ -53,7 +52,6 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Features Bar */}
             <section className="features-bar">
                 <div className="container flex-between flex-wrap gap-8">
                     <div className="feature-item">
@@ -87,7 +85,6 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Categories */}
             <section className="section bg-light">
                 <div className="container">
                     <div className="section-header">
@@ -111,7 +108,6 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Featured Products */}
             <section className="section">
                 <div className="container">
                     <div className="flex-between mb-12">
@@ -153,7 +149,6 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* About Section */}
             <section className="section about-home bg-dark text-white">
                 <div className="container grid-2">
                     <div className="about-home__img-wrapper">

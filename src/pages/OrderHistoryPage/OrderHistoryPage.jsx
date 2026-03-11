@@ -97,7 +97,7 @@ export default function OrderHistoryPage() {
                                     <div className="order-summary-text">
                                         {order.items.length} {order.items.length === 1 ? 'item' : 'items'} in total
                                     </div>
-                                    <Link to={`/orders/${order.id}`} className="btn-link flex items-center gap-2 text-primary font-bold">
+                                    <Link to={`/products`} className="btn-link flex items-center gap-2 text-primary font-bold">
                                         View Details <ChevronRight size={18} />
                                     </Link>
                                 </div>

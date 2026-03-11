@@ -3,22 +3,15 @@ import { authAPI } from '../api/api'
 
 const AuthContext = createContext(null)
 
-/**
- * AuthProvider: Handles the global user state for the application.
- * This simplified version stores user data in localStorage so that
- * the user stays "logged in" even after refreshing the page.
- */
 export function AuthProvider({ children }) {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
 
-    // On startup, check if we have a user in localStorage
     useEffect(() => {
         const savedUser = localStorage.getItem('user')
         if (savedUser) {
             const parsedUser = JSON.parse(savedUser)
             setUser(parsedUser)
-            // Optionally verify with backend
             checkAuth(parsedUser.username)
         } else {
             setLoading(false)
@@ -27,12 +20,10 @@ export function AuthProvider({ children }) {
 
     const checkAuth = async (username) => {
         try {
-            // Updated to pass username because we removed sessions
             const { data } = await authAPI.me(username)
             setUser(data)
             localStorage.setItem('user', JSON.stringify(data))
         } catch (err) {
-            console.error("Auth check failed", err)
             setUser(null)
             localStorage.removeItem('user')
         } finally {
@@ -43,15 +34,12 @@ export function AuthProvider({ children }) {
     const login = async (credentials) => {
         const { data } = await authAPI.login(credentials)
         setUser(data)
-        // Save user data to localStorage
         localStorage.setItem('user', JSON.stringify(data))
         return data
     }
 
     const register = async (userData) => {
         const { data } = await authAPI.register(userData)
-        // Typically we don't automatically login after register in simple apps,
-        // but let's just return the data.
         return data
     }
 

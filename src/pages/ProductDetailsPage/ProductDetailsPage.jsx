@@ -71,7 +71,6 @@ export default function ProductDetailsPage() {
                 </Link>
 
                 <div className="product-grid">
-                    {/* Image Gallery */}
                     <div className="product-gallery animate-fadeInUp">
                         <div className="main-image-wrapper">
                             <img src={product.imageUrl} alt={product.name} className="main-image" />
@@ -79,10 +78,8 @@ export default function ProductDetailsPage() {
                                 <div className="sold-out-overlay">Sold Out</div>
                             )}
                         </div>
-                        {/* Could add thumbnails here if product had multiple images */}
                     </div>
 
-                    {/* Product Info */}
                     <div className="product-info animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
                         <div className="product-header">
                             <span className="badge badge-primary mb-2">{product.category}</span>
